@@ -5,6 +5,11 @@ const userSchema = new mongoose.Schema({
   password: String,
   phoneNumber: { type: String, unique: true },
   dob: Date,
+  fullName: String,
+  employeeStatus: String,
+  investments: String,
+  howLong: String,
+  tellUs: String,
 });
 
 const User = mongoose.model('User', userSchema);

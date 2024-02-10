@@ -15,8 +15,8 @@ body {
   width: 400px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the start of the cross axis */
-  margin: auto; /* Automatically center horizontally */
+  align-items: flex-start;
+  margin: auto;
   height: 100vh;
 }
 
@@ -66,7 +66,12 @@ input {
   font-size: 16px;
 }
 
-button {
+.new-btn{
+  background-color:#0075FF;
+  color: white;
+}
+
+.create-btn {
   width: 416px;
   height: 52px;
   top: 597px;
@@ -81,6 +86,16 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px; */
+}
+
+.back-btn{
+  color: #666;
+  margin: 2px;
+}
+
+.success-message {
+  color: rgb(23, 225, 23);
+  font-size: small;
 }
 
 .error-message {

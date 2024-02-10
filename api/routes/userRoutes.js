@@ -1,10 +1,8 @@
-// routes/userRoutes.js
 const express = require("express");
 const router = express.Router();
 const { validateUserData } = require("../validation");
 const User = require("../models/User");
 
-// POST route for creating a new user
 router.post("/", validateUserData, async (req, res) => {
   try {
     const user = new User(req.body);

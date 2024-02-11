@@ -3,8 +3,11 @@ import { useDispatch } from "react-redux";
 import { fetchUserSuccess, fetchUserFailure } from "../../redux/actions";
 import UserDetail from "../userdetail/UserDetail";
 import "./userform.css";
+import config from '../../environment/config';
+
 
 const UserForm = () => {
+  const apiURL = config.apiUrl
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -74,7 +77,7 @@ const UserForm = () => {
 
     if (currentStep === 3) {
       try {
-        const response = await fetch("http://localhost:5000/api/user", {
+        const response = await fetch(`${apiURL}/api/user`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

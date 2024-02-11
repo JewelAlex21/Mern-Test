@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./userdetail.css";
-
+import config from '../../environment/config';
 const UserDetail = ({ accountId }) => {
   const [user, setUser] = useState(null);
+  const apiURL =  config.apiUrl
 
   useEffect(() => {
     const fetchUserDetails = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/user/${accountId}`
+          `${apiURL}/api/user/${accountId}`
         );
         const userData = await response.json();
         setUser(userData);

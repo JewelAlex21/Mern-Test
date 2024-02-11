@@ -265,6 +265,7 @@ const UserForm = () => {
                         )}
                       </header>
                     </div>
+                    <span className="form-paragraph">By clicking ‘Create your account’, you are agreeing to our Terms & Conditions and Privacy Policy.</span>
                   </div>
                 </>
               )}
@@ -344,7 +345,7 @@ const UserForm = () => {
                         How Long have you Lived in this address?
                       </label>
                     </div>
-                    <div className="form-floating mb-2">
+                    <div className="form-floating">
                       <textarea
                         type="text"
                         className="form-control"
@@ -358,12 +359,10 @@ const UserForm = () => {
                         Tell us a bit about yourself
                       </label>
                     </div>
-                    {/* <button
-                      className="back-btn"
-                      onClick={() => setCurrentStep(currentStep - 1)}
-                    >
-                      Back
-                    </button> */}
+                    <span className="form-paragraph">
+                      All information can be edited once you have created your
+                      account.
+                    </span>
                     <div className="mt-3">
                       <button type="submit" className="btn btn-primary w-100">
                         Save and continue

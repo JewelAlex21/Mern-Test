@@ -8,6 +8,7 @@ const userSchema = new mongoose.Schema({
   fullName: String,
   employeeStatus: String,
   investments: String,
+  address: String,
   howLong: String,
   tellUs: String,
 });

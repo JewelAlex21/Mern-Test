@@ -29,9 +29,11 @@ const UserDetail = ({ accountId }) => {
               <p>Name: <b>{user.fullName}</b></p>
               <p>Email: <b>{user.email}</b></p>
               <p>Phone Number: <b>{user.phoneNumber}</b> </p>
+              <p>Current Address: <b>{user.address ? user.address : "-"}</b> </p>
+              <p>How long have you lived at this address?: <b>{ user.howLong ? user.howLong : "-" }</b></p>
               <p>Date Of Birth: <b>{new Date(user.dob).toLocaleDateString()}</b></p>
               <p>About Yourself: <b>{user.tellUs ? user.tellUs : "-"}</b></p>
-              <p>Employee Status: <b>{new Date(user.dob).toLocaleDateString()}</b></p>
+              <p>Employee Status: <b>{user.employeeStatus}</b></p>
               <p>
                 Additional Savings/Investments:
                 <b>{user.investments ? user.investments : "-"}</b>

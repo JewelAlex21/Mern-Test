@@ -14,6 +14,7 @@ const UserForm = () => {
     phoneNumber: "",
     fullName: "",
     dob: "",
+    address: "",
     employeeStatus: "",
     investments: "",
     howLong: "",
@@ -26,6 +27,7 @@ const UserForm = () => {
     phoneNumber: "",
     fullName: "",
     dob: "",
+    address: "",
     employeeStatus: "",
     investments: "",
     howLong: "",
@@ -128,6 +130,7 @@ const UserForm = () => {
       phoneNumber: "",
       fullName: "",
       dob: "",
+      address: "",
       employeeStatus: "",
       investments: "",
       howLong: "",
@@ -140,6 +143,7 @@ const UserForm = () => {
       phoneNumber: "",
       fullName: "",
       dob: "",
+      address: "",
       employeeStatus: "",
       investments: "",
       howLong: "",
@@ -168,6 +172,9 @@ const UserForm = () => {
   return (
     <div className="container-fluid min-vh-100">
       <main>
+        <header>
+          {apiError && <p className="error-message">{apiError}</p>}
+        </header>
         <div className="row justify-content-center min-vh-100">
           <div className="col-md-4 align-self-center">
             <form className="form" onSubmit={handleSubmit}>
@@ -259,13 +266,11 @@ const UserForm = () => {
                       <button type="submit" className="btn btn-primary w-100">
                         Create your account
                       </button>
-                      <header>
-                        {apiError && (
-                          <p className="error-message">{apiError}</p>
-                        )}
-                      </header>
                     </div>
-                    <span className="form-paragraph">By clicking ‘Create your account’, you are agreeing to our Terms & Conditions and Privacy Policy.</span>
+                    <span className="form-paragraph">
+                      By clicking ‘Create your account’, you are agreeing to our
+                      Terms & Conditions and Privacy Policy.
+                    </span>
                   </div>
                 </>
               )}
@@ -330,6 +335,20 @@ const UserForm = () => {
                       {errors.dob && (
                         <p className="error-message">{errors.dob}</p>
                       )}
+                    </div>
+                    <div className="form-floating mb-2">
+                      <input
+                        type="text"
+                        className="form-control"
+                        name="address"
+                        id="floatingAddress"
+                        value={formData.address}
+                        onChange={handleChange}
+                        placeholder="How Long"
+                      />
+                      <label htmlFor="floatingAddress">
+                        Current Address
+                      </label>
                     </div>
                     <div className="form-floating mb-2">
                       <input
